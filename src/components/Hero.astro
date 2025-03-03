@@ -1,0 +1,32 @@
+---
+
+---
+<div>
+<img src="/yo.jpg" alt="">
+<h2>Bienvenido a mi portfolio</h2>
+<p>Aquí podrás ver algunos de mis proyectos más recientes.</p>
+<button onclick="location.href='/proyectos'">Ver Proyectos</button>
+</div>
+<style>
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    img{
+      width: 80%;
+      border-radius: 50%;
+    }
+
+    p{
+        line-height: 1.5;
+    }
+
+    @media (min-width: 600px){
+        img{
+            width: 40%;
+        }
+    }
+  </style>
