@@ -1,22 +1,133 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Antonella Serrese</title>
+    <style>
+      /* Estilos generales */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1f1f1f; /* Fondo oscuro */
+        color: #e0e0e0; /* Color de texto claro */
+      }
+
+      header {
+        background-color: #6a4c9c; /* Violeta suave */
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        margin: 5px 0;
+      }
+
+      main {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      footer {
+        background-color: #222222; /* Negro */
+        color: #f2a7d1; /* Rosa suave */
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 40px;
+      }
+
+      footer p {
+        font-size: 0.875rem;
+      }
+
+      button {
+        background-color: #f2a7d1; /* Rosa suave */
+        color: #222222; /* Negro */
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #f9c8d6; /* Rosa más claro */
+      }
+
+      button:active {
+        background-color: #e8a0b6; /* Rosa intermedio */
+      }
+
+      button:focus {
+        outline: 3px solid #f2a7d1; /* Rosa al hacer clic */
+      }
+
+      a {
+        color: #f2a7d1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #f9c8d6;
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
+
+        header p {
+          font-size: 1rem;
+        }
+
+        button {
+          font-size: 1rem;
+          padding: 10px 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+
+        header p {
+          font-size: 0.875rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Antonella Serrese</h1>
+        <p>Desarrolladora, Diseñadora, y Programadora</p>
+      </div>
+    </header>
+
+    <!-- Contenido dinámico de la página -->
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Antonella Serrese | Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
